@@ -11,7 +11,7 @@ const useSendMessage = () => {
         try {
             const token = Cookies.get('jwt')
             console.log(message)
-            const res = await axios.post(`http://localhost:5002/message/send/${selectedConversation._id}`,
+            const res = await axios.post(`https://mychat-4ayr.onrender.com/message/send/${selectedConversation._id}`,
                 { message },
                 {
                     withCredentials: true,

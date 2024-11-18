@@ -21,7 +21,7 @@ const LogIn = () => {
       email: data.email,
       password: data.password
     }
-    await axios.post("http://localhost:5002/user/login", userInfo,{
+    await axios.post("https://mychat-4ayr.onrender.com/user/login", userInfo,{
       withCredentials: true  
     })
       .then((response) => {

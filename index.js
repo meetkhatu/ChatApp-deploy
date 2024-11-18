@@ -11,8 +11,7 @@ import { app, server } from './SocketIO/server.js'
 dotenv.config()
 
 
-// const PORT = process.env.PORT || 5002
-const PORT = 5002
+const PORT = process.env.PORT || 5002
 const url = process.env.MONGODB_URI || 'mongodb://localhost:27017/chat'
 
 app.use(cors({

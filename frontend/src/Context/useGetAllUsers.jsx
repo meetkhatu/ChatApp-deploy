@@ -10,7 +10,7 @@ function useGetAllUsers() {
             try {
                 const token = Cookies.get("jwt");
                 console.log(token)
-                const response = await axios.get("http://localhost:5002/user/getUserProfile", {
+                const response = await axios.get("https://mychat-4ayr.onrender.com/user/getUserProfile", {
                     withCredentials: true,
                     headers: {
                         Authorization: `Bearer ${token}`,

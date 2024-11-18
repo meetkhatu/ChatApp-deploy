@@ -10,7 +10,7 @@ const Logout = () => {
   const handleLogout = async () => {
     setLoading(true)
     try{
-      const response = await axios.post('http://localhost:5002/user/logout')
+      const response = await axios.post('https://mychat-4ayr.onrender.com/user/logout')
       localStorage.removeItem('messenger')
       Cookies.remove('jwt')
       setLoading(false)

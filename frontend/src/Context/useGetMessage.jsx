@@ -14,7 +14,7 @@ const useGetMessage = () => {
             if(selectedConversation && selectedConversation._id){
             try{ 
                 const token = Cookies.get("jwt");
-                const response = await axios.get(`http://localhost:5002/message/get/${selectedConversation._id}`, {
+                const response = await axios.get(`https://mychat-4ayr.onrender.com/message/get/${selectedConversation._id}`, {
                     withCredentials: true,
                     headers: {
                         Authorization: `Bearer ${token}`,
