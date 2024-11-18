@@ -41,10 +41,10 @@ app.use('/message', messageRoute)
 if(process.env.NODE_ENV === 'production'){
     try{
         const dirPath = path.resolve()
-        console.log("Serving static files from:", dirPath);  // Log the path to check if it's correct
-        app.use(express.static('./frontend/build'));  // Serve static files (JS, CSS, etc.)
+        console.log("Serving static files from:", dirPath);  
+        app.use(express.static('./frontend/build'));  
 
-        // Fallback for React Router (catch-all route to serve index.html for SPA)
+        
         app.get('*', (req, res) => {
             res.sendFile(path.resolve(dirPath, './frontend/build','index.html'));
         });
