@@ -15,7 +15,7 @@ const PORT = process.env.PORT || 5002
 const url = process.env.MONGODB_URI || 'mongodb://localhost:27017/chat'
 
 app.use(cors({
-    origin: ['http://localhost:5002','http://localhost:3000'],
+    origin: ['http://localhost:5002','http://localhost:3000','https://mychat-4ayr.onrender.com'],
     methods: ['GET', 'POST'],
     credentials: true,
 }));
